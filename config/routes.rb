@@ -1,5 +1,8 @@
 Sunshine::Application.routes.draw do
+  devise_for :users
+
   resources :volunteers
+  root to: 'volunteers#index'
 
 
   # The priority is based upon order of creation:
