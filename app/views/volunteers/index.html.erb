@@ -1,33 +1,25 @@
-<h1>Listing volunteers</h1>
+<div class="page-header">
+    <h1>All of the Volunteers</h1>
+</div>
 
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Address</th>
-    <th>County</th>
-    <th>Phone</th>
-    <th>Email</th>
-    <th>Hours</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+<div class="btn btn-success">
+    <%= link_to "Create a New Volunteer", new_volunteer_path %>
+</div>
 
 <% @volunteers.each do |volunteer| %>
-  <tr>
-    <td><%= volunteer.name %></td>
-    <td><%= volunteer.address %></td>
-    <td><%= volunteer.county %></td>
-    <td><%= volunteer.phone %></td>
-    <td><%= volunteer.email %></td>
-    <td><%= volunteer.hours %></td>
-    <td><%= link_to 'Show', volunteer %></td>
-    <td><%= link_to 'Edit', edit_volunteer_path(volunteer) %></td>
-    <td><%= link_to 'Destroy', volunteer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
+<div class="volunteer">
+    <strong><u><%= volunteer.name %></u></strong>
+    <p><strong>Address: </strong><%= volunteer.address %></p>
+    <p><strong>County: </strong><%= volunteer.county %></p>
+    <p><strong>Phone: </strong><%= volunteer.phone %></p>
+    <p><strong>Email: </strong><%= volunteer.email %></p>
+    <p><strong>Availability: </strong><%= volunteer.hours + " hours" %></p>
+    <div class="meta">
+        <em>Entry created: <%= time_tag(volunteer.created_at) %></em>
+        <span class="admin">
+            | <%= link_to "Edit", edit_volunteer_path(volunteer) %> |
+            <%= link_to "Delete", volunteer, method: :delete, data: { confirm: "Don't you dare!"} %>
+        </span>
+    </div>
+</div>
 <% end %>
-</table>
-
-<br />
-
-<%= link_to 'New Volunteer', new_volunteer_path %>

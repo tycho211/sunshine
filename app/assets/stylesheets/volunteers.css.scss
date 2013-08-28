@@ -1,3 +1,24 @@
 // Place all the styles related to the volunteers controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.volunteer {
+	border-bottom: solid 1px #CCC;
+	padding: 10px 0;
+}
+
+.volunteer p {
+	margin: 4px 0;
+}
+
+.status.hover {
+	background: #F0F0F0;
+}
+
+.volunteer .admin {
+	display: none;
+}
+
+.volunteer.hover .admin {
+	display: inline;
+}
