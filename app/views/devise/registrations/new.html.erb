@@ -4,6 +4,15 @@
   <%= devise_error_messages! %>
 
   <div class = "btn-group dropdown"><%= f.label :account_type %><br />
+    <button class="btn">Account Type</button>
+    <button class="btn dropdown-toggle" data-toggle="dropdown">
+      <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu">
+      <li>Volunteer
+      <li>Management
+      <li>Admin
+    </ul>
   </div>
 
   <div><%= f.label :first_name %><br />
