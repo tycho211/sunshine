@@ -1,0 +1,24 @@
+// Place all the styles related to the voters controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.voter {
+  border-bottom: solid 1px #CCC;
+  padding: 10px 0;
+}
+
+.voter p {
+  margin: 4px 0;
+}
+
+.status.hover {
+  background: #F0F0F0;
+}
+
+.voter .admin {
+  display: none;
+}
+
+.voter.hover .admin {
+  display: inline;
+  }

@@ -1,5 +1,5 @@
 <div class="page-header">
-    <h1>All of the Volunteers</h1>
+    <h1>All Volunteers</h1>
 </div>
 
 <div class="btn btn-success">
@@ -19,6 +19,7 @@
         <span class="admin">
             | <%= link_to "Edit", edit_volunteer_path(volunteer) %> |
             <%= link_to "Delete", volunteer, method: :delete, data: { confirm: "Don't you dare!"} %>
+            | <%= link_to "Assign voters"%>
         </span>
     </div>
 </div>

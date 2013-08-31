@@ -1,4 +1,7 @@
 Sunshine::Application.routes.draw do
+  resources :voters
+
+
   devise_for :users
 
   resources :volunteers

@@ -1,0 +1,38 @@
+<%= simple_form_for(@voter, html: {class: "form-horizontal"}) do |f| %>
+  <% if @voter.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@voter.errors.count, "error") %> prohibited this voter from being saved:</h2>
+
+      <ul>
+      <% @volunteer.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+<div class="field">
+    <%= f.input :name %><br />
+  </div>
+  <div class="field">
+    <%= f.input :address %><br />
+  </div>
+  <div class="field">
+    <%= f.input :county %><br />
+  </div>
+  <div class="field">
+    <%= f.input :phone %><br />
+  </div>
+  <div class="field">
+    <%= f.input :email %><br />
+  </div>
+  <div class="field">
+    <%= f.input :party_affiliation %><br />
+  </div>
+  <div class="field">
+    <%= f.input :confirmed_vote %><br />
+  </div>
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

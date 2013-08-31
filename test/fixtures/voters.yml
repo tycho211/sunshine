@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  address: MyString
+  county: MyString
+  phone: MyString
+  email: MyString
+  party_affiliation: 
+  confirmed_vote: false
+
+two:
+  name: MyString
+  address: MyString
+  county: MyString
+  phone: MyString
+  email: MyString
+  party_affiliation: 
+  confirmed_vote: false
